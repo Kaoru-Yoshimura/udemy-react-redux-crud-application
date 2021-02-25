@@ -1,8 +1,18 @@
+import　React, { Component } from 'react';
 
+// class App extends Component  {
+//   render() {
+//     return (
+//       <React.Fragment>
+//         <label htmlFor="bar">bar</label>
+//         <input type="text" onChange={() => { console.log("Its OK") }} />
+//       </React.Fragment>
+//     )
+//   }
+// }
 
-function App() {
-  return <div className="App"><h1 classname="App-title">Hello,world!</h1></div>
-  ;
+const App = () => {
+  return <div>Hi!</div>
 }
 
 export default App;
