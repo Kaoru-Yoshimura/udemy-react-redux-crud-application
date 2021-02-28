@@ -1,18 +1,33 @@
-import　React, { Component } from 'react';
-
-// class App extends Component  {
-//   render() {
-//     return (
-//       <React.Fragment>
-//         <label htmlFor="bar">bar</label>
-//         <input type="text" onChange={() => { console.log("Its OK") }} />
-//       </React.Fragment>
-//     )
-//   }
-// }
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const App = () => {
-  return <div>Hi!</div>
+  const profiles = [
+    {name:"taro",age:20},
+    {name:"taradsfo",age:20},
+    {name:"taradsfo",age:20},
+    {name:"tarasdafsadfdsfo"},
+  ]
+  return (
+    <div>
+      {
+        profiles.map((profile,index) => {
+          return <User name={profile.name} age={profile.age} key={ index}/>
+
+      })
+      }
+
+    </div>
+  )
+}
+
+const User = (props) => {
+  return <div>This Is {props.name} and I have {props.age}dig </div>
+}
+
+User.propTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number.isRequired
 }
 
 export default App;
